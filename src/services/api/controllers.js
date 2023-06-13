@@ -16,9 +16,11 @@ const getDayMeal = async (req, res) => {
 
   const modifiedMeal = {
     date: moment(meal.date).format('YYYY-MM-DD'),
-    breakfast: meal.breakfast,
-    lunch: meal.lunch,
-    dinner: meal.dinner,
+    meal: {
+      breakfast: meal.breakfast,
+      lunch: meal.lunch,
+      dinner: meal.dinner,
+    }
   };
 
   res.send(modifiedMeal);
