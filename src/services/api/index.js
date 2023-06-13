@@ -6,8 +6,13 @@ module.exports = {
   routes: [
     {
       method: 'get',
-      path: '/',
-      handler: controllers.getMeal,
+      path: '/week',
+      handler: controllers.getWeekMeal,
+    },
+    {
+      method: 'get',
+      path: '/:day',
+      handler: controllers.getDayMeal,
     },
   ],
 };
