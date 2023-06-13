@@ -11,6 +11,7 @@ check-job:
   stage: check
   script:
     - docker info
+    - echo $MONGO_URI
 
 build-job:
   stage: build
