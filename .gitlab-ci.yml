@@ -28,7 +28,7 @@ deploy-job:
       docker run -d
       --name $CI_PROJECT_PATH_SLUG
       --restart always
-      -e MONGO_URI='$MONGO_URI'
+      -e MONGO_URI="$MONGO_URI"
       --label traefik.enable=true
       --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.entrypoints=https
       --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.rule='Host(`meal.2w.vc`) && Path(`/api`)'
