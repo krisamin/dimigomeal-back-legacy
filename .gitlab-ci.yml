@@ -31,7 +31,7 @@ deploy-job:
       -e MONGO_URI="$MONGO_URI"
       --label traefik.enable=true
       --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.entrypoints=https
-      --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.rule='Host(`meal.2w.vc`) && PathPrefix(`/api`)'
+      --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.rule='Host(`xn--299a1v27nvthhjj.com`) && PathPrefix(`/api`)'
       --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.tls=true
       --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.tls.certresolver=cloudflare
       --label traefik.http.routers.$CI_PROJECT_PATH_SLUG.service=$CI_PROJECT_PATH_SLUG
