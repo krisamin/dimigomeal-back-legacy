@@ -15,6 +15,7 @@ const getDayMeal = async (req, res) => {
   }
 
   const modifiedMeal = {
+    status: "success",
     date: moment(meal.date).format('YYYY-MM-DD'),
     meal: {
       breakfast: meal.breakfast,
