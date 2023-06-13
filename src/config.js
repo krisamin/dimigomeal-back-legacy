@@ -1,8 +1,13 @@
 const dotenv = require('dotenv');
 
 const env = dotenv.config().parsed;
-if (!env) throw new Error('No env file found');
+
+const required = (value) => {
+  if(!value)
+    throw new Error(`Missing required environment variable ${value}`);
+  return value;
+};
 
 module.exports = {
-  mongoUri: env.MONGO_URI
+  mongoUri: required(env.MONGO_URI || process.env.MONGO_URI)
 };
