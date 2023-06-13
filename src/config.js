@@ -9,5 +9,5 @@ const required = (value) => {
 };
 
 module.exports = {
-  mongoUri: required(env.MONGO_URI || process.env.MONGO_URI)
+  mongoUri: required(env?.MONGO_URI || process.env?.MONGO_URI)
 };
